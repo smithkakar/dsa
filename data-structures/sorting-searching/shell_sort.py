@@ -1,12 +1,12 @@
 '''
-The shell sort improves on the insertion sort by breaking the 
-original list into a number of smaller sublists, each of which 
-is sorted using an insertion sort. The unique way that 
-these sublists are chosen is the key to the shell sort. 
-Instead of breaking the list into sublists of contiguous items, 
-the shell sort uses an increment i, sometimes called the gap, 
-to create a sublist by choosing all items that are i items apart.
+The shell sort improves on the insertion sort by breaking the original list into a number of smaller sublists, 
+each of which is sorted using an insertion sort. The unique way that these sublists are chosen 
+is the key to the shell sort. 
+Instead of breaking the list into sublists of contiguous items, the shell sort uses an increment i, 
+sometimes called the gap, to create a sublist by choosing all items that are i items apart.
 '''
+
+
 def shell_sort(arr):
     sublistcount = len(arr) // 2
     print('before iteration of gap insertion: ', arr)
@@ -17,8 +17,9 @@ def shell_sort(arr):
             arr = gap_insertion_sort(arr, start, sublistcount)
             print('after iteration of gap insertion:  ', arr)
         sublistcount = sublistcount // 2
-    
+
     return arr
+
 
 def gap_insertion_sort(arr, start, gap):
     for i in range(start+gap, len(arr), gap):
@@ -34,9 +35,6 @@ def gap_insertion_sort(arr, start, gap):
 
     return arr
 
-arr = [45,67,23,45,21,24,7,2,6,4,90]
+
+arr = [45, 67, 23, 45, 21, 24, 7, 2, 6, 4, 90]
 print(shell_sort(arr))
-
-
-        
-
