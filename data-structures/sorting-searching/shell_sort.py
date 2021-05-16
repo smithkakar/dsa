@@ -1,3 +1,4 @@
+#!/usr/local/bin/env python3
 '''
 The shell sort improves on the insertion sort by breaking the original list into a number of smaller sublists, 
 each of which is sorted using an insertion sort. The unique way that these sublists are chosen 

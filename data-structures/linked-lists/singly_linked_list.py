@@ -1,3 +1,4 @@
+#!/usr/local/bin/env python3
 '''
 - Linked Lists have constant-time insertions and deletions in any position, 
 in comparison, arrays require O(n) time to do the same thing.
@@ -7,10 +8,12 @@ the head of the list to the kth element.
 In contrast, arrays have constant time operations to access elements in an array.
 '''
 
+
 class Node:
     def __init__(self, value):
         self.value = value
         self.next_node = None
+
 
 a = Node(1)
 b = Node(2)

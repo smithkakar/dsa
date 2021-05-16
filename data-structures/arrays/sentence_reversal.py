@@ -1,3 +1,4 @@
+#!/usr/local/bin/env python3
 '''
 Problem:
 Given a string of words, reverse all the words. For example:
@@ -19,20 +20,25 @@ with the use of split() and some slicing or use of reversed.
 
 from nose.tools import assert_equal
 
+
 class ReversalTest(object):
-    
-    def test(self,sol):
+
+    def test(self, sol):
         assert_equal(sol('    space before'), 'before space')
         assert_equal(sol('space after     '), 'after space')
-        assert_equal(sol('   Hello John    how are you   '), 'you are how John Hello')
+        assert_equal(sol('   Hello John    how are you   '),
+                     'you are how John Hello')
         assert_equal(sol('1'), '1')
         print("ALL TEST CASES PASSED")
+
 
 def rev_word1(s):
     return " ".join(reversed(s.split()))
 
+
 def rev_word2(s):
     return " ".join(s.split()[::-1])
+
 
 def rev_word3(s):
     # Split the words manually

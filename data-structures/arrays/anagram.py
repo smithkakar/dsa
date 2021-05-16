@@ -1,3 +1,4 @@
+#!/usr/local/bin/env python3
 from nose.tools import assert_equal
 
 '''

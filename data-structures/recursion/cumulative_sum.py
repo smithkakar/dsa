@@ -1,4 +1,6 @@
+#!/usr/local/bin/env python3
 import argparse
+
 
 def cumulative_sum(n):
     if n == 0:
@@ -6,8 +8,10 @@ def cumulative_sum(n):
     else:
         return n + cumulative_sum(n-1)
 
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('number', type=int)
     args = parser.parse_args()
-    print(f'cumulative sum of digits of {args.number} is: {cumulative_sum(args.number)}')
+    print(
+        f'cumulative sum of digits of {args.number} is: {cumulative_sum(args.number)}')

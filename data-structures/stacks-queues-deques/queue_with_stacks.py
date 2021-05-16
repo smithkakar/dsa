@@ -1,3 +1,4 @@
+#!/usr/local/bin/env python3
 class QueueWithStacks:
     def __init__(self):
         self.instack = []
@@ -11,6 +12,7 @@ class QueueWithStacks:
             while self.instack:
                 self.outstack.append(self.instack.pop())
         return self.outstack.pop()
+
 
 q = QueueWithStacks()
 

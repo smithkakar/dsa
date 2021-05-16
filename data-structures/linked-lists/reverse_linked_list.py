@@ -1,13 +1,16 @@
+#!/usr/local/bin/env python3
 '''
 Write a function to reverse a Linked List in place O(1) space. 
 The function will take in the head of the list as input and return the new head of the list.
 '''
 
+
 class Node(object):
-    
-    def __init__(self,value):
+
+    def __init__(self, value):
         self.value = value
         self.nextnode = None
+
 
 def reverse(head):
     current = head
@@ -20,6 +23,7 @@ def reverse(head):
         current = nextnode
 
     return previous
+
 
 a = Node(1)
 b = Node(2)

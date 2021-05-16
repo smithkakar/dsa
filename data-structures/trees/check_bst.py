@@ -1,3 +1,4 @@
+#!/usr/local/bin/env python3
 '''
 Problem: Given a binary tree, check whether it’s a binary search tree or not.
 Sol #1: If a tree is a binary search tree, then traversing the tree inorder 
@@ -7,17 +8,22 @@ So, we can perform an inorder traversal and check whether the node values are so
 import math
 prev = -math.inf
 
+
 class Node:
     """
     Creates a Binary tree node that has data,
     a pointer to it's left and right child
     """
+
     def __init__(self, data):
         self.left = None
         self.right = None
         self.data = data
 
+
 tree_vals = []
+
+
 def inorder(tree):
     if tree != None:
         inorder(tree.left)
@@ -26,10 +32,13 @@ def inorder(tree):
 
     return tree_vals
 
+
 def sort_check(tree_vals):
     return tree_vals == sorted(tree_vals)
 
 # Alternate way
+
+
 def checkBST(root):
     global prev
 
@@ -39,12 +48,13 @@ def checkBST(root):
 
         if root.data < prev:
             return False
-        
+
         prev = root.data
 
         return checkBST(root.right)
 
     return True
+
 
 root = Node(4)
 root.left = Node(2)

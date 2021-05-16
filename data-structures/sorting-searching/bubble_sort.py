@@ -1,3 +1,6 @@
+#!/usr/local/bin/env python3
+
+
 def bubble_sort(arr):
     for n in range(len(arr)-1, 0, -1):
         for i in range(n):
@@ -8,7 +11,8 @@ def bubble_sort(arr):
 
     return arr
 
-arr = [3,2,13,4,6,5,7,8,1,20]
+
+arr = [3, 2, 13, 4, 6, 5, 7, 8, 1, 20]
 print('unsorted array: ', arr)
 print('sorted array: ', bubble_sort(arr))
 
@@ -24,6 +28,7 @@ def bubble_sort2(arr):
 
     return arr
 
-arr = [3,2,13,4,6,5,7,8,1,20]
+
+arr = [3, 2, 13, 4, 6, 5, 7, 8, 1, 20]
 print('unsorted array: ', arr)
 print('sorted array: ', bubble_sort2(arr))

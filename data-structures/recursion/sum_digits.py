@@ -1,4 +1,6 @@
+#!/usr/local/bin/env python3
 import argparse
+
 
 def sum_digits(n):
     # print(n)
@@ -6,6 +8,7 @@ def sum_digits(n):
         return n
     else:
         return (n % 10 + sum_digits(n//10))
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()

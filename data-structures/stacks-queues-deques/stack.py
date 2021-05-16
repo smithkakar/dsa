@@ -1,6 +1,8 @@
+#!/usr/local/bin/env python3
 '''
 Stack Implementation using List
 '''
+
 
 class Stack:
 
@@ -25,6 +27,7 @@ class Stack:
 
     def size(self):
         return len(self.items)
+
 
 s = Stack()
 print("Empty Stack? ", s.isEmpty())

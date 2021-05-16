@@ -1,3 +1,4 @@
+#!/usr/local/bin/env python3
 '''
 String Compression
 Problem:
@@ -20,6 +21,7 @@ The solution below should yield us with a Time and Space complexity of O(n).
 
 from nose.tools import assert_equal
 
+
 class TestCompress(object):
 
     def test(self, sol):
@@ -28,8 +30,8 @@ class TestCompress(object):
         assert_equal(sol('AAABCCDDDDD'), 'A3B1C2D5')
         print('ALL TEST CASES PASSED')
 
-def compress(s):
 
+def compress(s):
     """
     This solution compresses without checking.
     Known as the RunLength Compression algorithm.
@@ -37,7 +39,7 @@ def compress(s):
 
     run = ""
     l = len(s)
-    
+
     if l == 0:
         return ""
 
@@ -60,6 +62,6 @@ def compress(s):
 
     return run
 
-    
+
 t = TestCompress()
 t.test(compress)

@@ -1,3 +1,4 @@
+#!/usr/local/bin/env python3
 '''
 This is a classic recursion problem: Given a target amount n and a list (array) of distinct coin values, 
 what's the fewest coins needed to make the change amount.
@@ -17,14 +18,16 @@ We'll show a basic recursive example and show why it's actually not the best way
 
 from nose.tools import assert_equal
 
+
 class TestCoins(object):
-    
+
     def check(self, solution):
-        coins = [1,5,10,25]
+        coins = [1, 5, 10, 25]
         assert_equal(solution(45, coins), 3)
         assert_equal(solution(23, coins), 5)
         assert_equal(solution(74, coins), 8)
         print('Passed all tests.')
+
 
 def coin_recursion(target, coins):
     min_coins = target
@@ -39,11 +42,13 @@ def coin_recursion(target, coins):
 
     return min_coins
 
+
 '''
 The problem with this approach is that it is very inefficient! 
 It can take many, many recursive calls to finish this problem and 
 it is also inaccurate for non standard coin values (coin values that are not 1,5,10, etc.)
 '''
+
 
 def coin_dynamic(target, coins, cache=None):
     if cache is None:
@@ -65,6 +70,7 @@ def coin_dynamic(target, coins, cache=None):
                 cache[target] = min_coins
 
     return min_coins
+
 
 test = TestCoins()
 test.check(coin_dynamic)

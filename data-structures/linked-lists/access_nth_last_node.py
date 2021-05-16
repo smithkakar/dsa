@@ -1,3 +1,4 @@
+#!/usr/local/bin/env python3
 '''
 Problem:
 Write a function that takes a head node and an integer value n and 
@@ -20,17 +21,20 @@ keeping a distance n between them.
 '''
 from nose.tools import assert_equal
 
+
 class TestNLast(object):
-    
+
     def test(self, sol):
         assert_equal(sol(2, a), d)
         print('ALL TEST CASES PASSED')
+
 
 class Node:
 
     def __init__(self, value):
         self.value = value
-        self.nextnode  = None
+        self.nextnode = None
+
 
 a = Node(1)
 b = Node(2)
@@ -43,6 +47,7 @@ b.nextnode = c
 c.nextnode = d
 d.nextnode = e
 
+
 def nth_last_node(n, head):
     left_pointer = head
     right_pointer = head
@@ -52,12 +57,13 @@ def nth_last_node(n, head):
             raise LookupError('Error: n is larger than the linked list')
 
         right_pointer = right_pointer.nextnode
-        
+
     while right_pointer.nextnode:
         left_pointer = left_pointer.nextnode
         right_pointer = right_pointer.nextnode
 
     return left_pointer
+
 
 t = TestNLast()
 t.test(nth_last_node)

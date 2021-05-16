@@ -1,12 +1,17 @@
+#!/usr/local/bin/env python3
 from nose.tools import assert_equal
 
+
 class TestPerm(object):
-    
+
     def test(self, solution):
-        
-        assert_equal(sorted(solution('abc')), sorted(['abc', 'acb', 'bac', 'bca', 'cab', 'cba']))
-        assert_equal(sorted(solution('dog')), sorted(['dog', 'dgo', 'odg', 'ogd', 'gdo', 'god']) )
+
+        assert_equal(sorted(solution('abc')), sorted(
+            ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']))
+        assert_equal(sorted(solution('dog')), sorted(
+            ['dog', 'dgo', 'odg', 'ogd', 'gdo', 'god']))
         print('All test cases passed.')
+
 
 def permute(s):
     output = []
@@ -18,6 +23,7 @@ def permute(s):
                 output += [letter + perm]
 
     return output
+
 
 t = TestPerm()
 t.test(permute)

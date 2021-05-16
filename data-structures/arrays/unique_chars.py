@@ -1,3 +1,4 @@
+#!/usr/local/bin/env python3
 '''
 Problem:
 Given a string, determine if it is compreised of all unique characters.
@@ -17,8 +18,10 @@ class TestUnique(object):
         assert_equal(sol('abcdefg'), True)
         print('ALL TEST CASES PASSED')
 
+
 def unq_chars1(s):
     return len(set(s)) == len(s)
+
 
 def unq_chars2(s):
     chars = set()
@@ -29,6 +32,7 @@ def unq_chars2(s):
             chars.add(char)
 
     return True
+
 
 t = TestUnique()
 t.test(unq_chars1)

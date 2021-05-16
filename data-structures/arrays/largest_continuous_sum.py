@@ -1,3 +1,4 @@
+#!/usr/local/bin/env python3
 '''
 Problem:
 Given an array of integers (positive and negative),
@@ -22,14 +23,16 @@ Then the result would be the largest negative number.
 
 from nose.tools import assert_equal
 
+
 class LargestContTest(object):
-    def test(self,sol):
-        assert_equal(sol([1,2,-1,3,4,-1]), 9)
-        assert_equal(sol([1,2,-1,3,4,10,10,-10,-1]), 29)
-        assert_equal(sol([-1,1]), 1)
-        assert_equal(sol([-11,-2,-1,-3,-4,-10,-10,-10,-1]), -1)
+    def test(self, sol):
+        assert_equal(sol([1, 2, -1, 3, 4, -1]), 9)
+        assert_equal(sol([1, 2, -1, 3, 4, 10, 10, -10, -1]), 29)
+        assert_equal(sol([-1, 1]), 1)
+        assert_equal(sol([-11, -2, -1, -3, -4, -10, -10, -10, -1]), -1)
         print('ALL TEST CASES PASSED')
-        
+
+
 def largest_cont_sum(arr):
 
     # edge case
@@ -44,6 +47,7 @@ def largest_cont_sum(arr):
         max_sum = max(current_sum, max_sum)
 
     return max_sum
+
 
 t = LargestContTest()
 t.test(largest_cont_sum)

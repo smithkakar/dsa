@@ -1,3 +1,4 @@
+#!/usr/local/bin/env python3
 class BinaryTree(object):
     def __init__(self, rootValue):
         self.key = rootValue
@@ -31,6 +32,7 @@ class BinaryTree(object):
 
     def getRootVal(self):
         return self.key
+
 
 r = BinaryTree('a')
 print(r.getRootVal())

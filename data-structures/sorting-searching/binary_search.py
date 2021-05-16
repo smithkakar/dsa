@@ -1,3 +1,4 @@
+#!/usr/local/bin/env python3
 def binary_search(arr, ele):
     # track indexes
     first = 0
@@ -17,6 +18,7 @@ def binary_search(arr, ele):
 
     return found
 
+
 def rec_binary_search(arr, ele):
     # base case for recursive implementation
     if len(arr) == 0:
@@ -30,6 +32,7 @@ def rec_binary_search(arr, ele):
                 return rec_binary_search(arr[:mid], ele)
             else:
                 return rec_binary_search(arr[mid+1:], ele)
+
 
 # list must already be sorted!
 arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]

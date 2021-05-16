@@ -1,3 +1,4 @@
+#!/usr/local/bin/env python3
 '''
 Problem Statement
 Given a string of opening and closing parentheses, check whether it’s balanced.
@@ -11,13 +12,15 @@ For example ‘([])’ is balanced but ‘([)]’ is not.
 
 from nose.tools import assert_equal
 
+
 class TestBalanceCheck(object):
-    
+
     def test(self, sol):
         assert_equal(sol('[](){([[[]]])}('), False)
         assert_equal(sol('[{{{(())}}}]((()))'), True)
         assert_equal(sol('[[[]])]'), False)
         print('ALL TEST CASES PASSED')
+
 
 def check_balanced_paren(s):
     # check if even number of brackets
@@ -45,6 +48,7 @@ def check_balanced_paren(s):
 
         # in case there were opened parens that were not closed
     return len(stack) == 0
+
 
 print(check_balanced_paren('[](){([[[]]])}'))
 t = TestBalanceCheck()

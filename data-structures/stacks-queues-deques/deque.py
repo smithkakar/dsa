@@ -1,6 +1,8 @@
+#!/usr/local/bin/env python3
 '''
 Deque Implementation using List
 '''
+
 
 class Deque:
     def __init__(self):
@@ -13,7 +15,7 @@ class Deque:
         self.items.append(item)
 
     def addRear(self, item):
-        self.items.insert(0,item)
+        self.items.insert(0, item)
 
     def removeFront(self):
         return self.items.pop()
@@ -23,6 +25,7 @@ class Deque:
 
     def size(self):
         return len(self.items)
+
 
 d = Deque()
 d.addFront('hello')
